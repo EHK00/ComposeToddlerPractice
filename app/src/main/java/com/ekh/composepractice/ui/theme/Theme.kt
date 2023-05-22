@@ -16,27 +16,26 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
 
-private val DarkColorPalette = darkColorScheme(
-    surface = Blue,
-    onSurface = Navy,
-    primary = Navy,
-    onPrimary = Chartreuse,
+private val LightColorPalette = lightColorScheme(
+    primary = gray900,
+    secondary = rust600,
+    background = taupe100,
+    surface = Color.White.copy(alpha = .85f),
+    onPrimary = Color.White,
+    onSecondary = Color.White,
+    onBackground = taupe800,
+    onSurface = gray900.copy(alpha = 0.8f)
 )
 
-private val LightColorPalette = lightColorScheme(
-    surface = Blue,
-    onSurface = Color.White,
-    primary = LightBlue,
-    onPrimary = Navy,
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+private val DarkColorPalette = darkColorScheme(
+    primary = Color.White,
+    secondary = rust300,
+    background = gray900,
+    surface = Color.White.copy(alpha = 0.15f),
+    onPrimary = gray900,
+    onSecondary = gray900,
+    onBackground = taupe100,
+    onSurface = Color.White.copy(alpha = .8f)
 )
 
 @Composable
